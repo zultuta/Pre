@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "c41c02b6-afa6-44fc-a34a-06c8d8ee744c",
+		"name": "Pre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5310139"
+	},
+	"item": [
+		{
+			"name": "AuthenticateUser(Login)",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"zul\",\r\n  \"password\": \"zul@12344\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/auth/login",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserAccount",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Zul\",\r\n  \"lastName\": \"Boss\",\r\n  \"userName\": \"zul\",\r\n  \"password\": \"zul@12344\",\r\n  \"email\": \"zul@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/user/create",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProject",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"projectName\": \"Projeecte12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/create",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AssignProject",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"assigneeUserId\": 10,\r\n  \"projectId\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/assign",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnAssignProject",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"assigneeUserId\": 5,\r\n  \"projectId\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/unassign",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"unassign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"string\",\r\n  \"weight\": 10,\r\n  \"unit\": \"t\",\r\n  \"carbonFootPrintPerGram\": 2,\r\n  \"projectId\": 27\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/product/add",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProject",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/delete/6",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditProject",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"projectId\": 7,\r\n  \"projectName\": \"LalakukuLala\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/edit",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditUser",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Abuja Zulqornain\",\r\n  \"lastName\": \"Gambari\",\r\n  \"password\": \"abuja@1234\",\r\n  \"email\": \"user@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/user/edit",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/getAll?MinDateCreated=98",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"getAll"
+					],
+					"query": [
+						{
+							"key": "MinDateCreated",
+							"value": "98"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/user/delete",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserProject",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/get/27/product?minCarbonFootPrint=0000000&&maxCarbonFootPrint=560000000",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"get",
+						"27",
+						"product"
+					],
+					"query": [
+						{
+							"key": "minCarbonFootPrint",
+							"value": "0000000"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "maxCarbonFootPrint",
+							"value": "560000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAsignedProjects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/project/getAll",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"project",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFidWphMSIsInVzZXJJZCI6IjEwIiwibmJmIjoxNjY4ODc5MDQ0LCJleHAiOjE2NjkwNTkwNDQsImlhdCI6MTY2ODg3OTA0NH0.DwVSeCVG95aJAzJiA66v3_qb0DyZpJoxlE2w5eYHRig",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

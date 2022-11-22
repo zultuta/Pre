@@ -55,13 +55,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/api/user/create",
+					"raw": "{{BaseUrl}}/api/auth/create",
 					"host": [
 						"{{BaseUrl}}"
 					],
 					"path": [
 						"api",
-						"user",
+						"auth",
 						"create"
 					]
 				}

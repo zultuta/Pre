@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"userName\": \"zul\",\r\n  \"password\": \"zul@12344\"\r\n}",
+					"raw": "{\r\n  \"userName\": \"zul1\",\r\n  \"password\": \"abuja@1234\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,7 +78,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"projectName\": \"Projeecte12\"\r\n}",
+					"raw": "{\r\n  \"projectName\": \"Prdojeecte1w2\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -109,7 +109,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"assigneeUserId\": 10,\r\n  \"projectId\": 30\r\n}",
+					"raw": "{\r\n  \"assigneeUserId\": 6,\r\n  \"projectId\": 4\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -306,20 +306,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/api/project/getAll?MinDateCreated=98",
+					"raw": "{{BaseUrl}}/api/user/details",
 					"host": [
 						"{{BaseUrl}}"
 					],
 					"path": [
 						"api",
-						"project",
-						"getAll"
-					],
-					"query": [
-						{
-							"key": "MinDateCreated",
-							"value": "98"
-						}
+						"user",
+						"details"
 					]
 				}
 			},
@@ -375,7 +369,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/api/project/get/27/product?minCarbonFootPrint=0000000&&maxCarbonFootPrint=560000000",
+					"raw": "{{BaseUrl}}/api/project/get/3/product?minCarbonFootPrint=1000000&&maxCarbonFootPrint=560000000",
 					"host": [
 						"{{BaseUrl}}"
 					],
@@ -383,13 +377,13 @@
 						"api",
 						"project",
 						"get",
-						"27",
+						"3",
 						"product"
 					],
 					"query": [
 						{
 							"key": "minCarbonFootPrint",
-							"value": "0000000"
+							"value": "1000000"
 						},
 						{
 							"key": null,
@@ -423,7 +417,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/api/project/getAll",
+					"raw": "{{BaseUrl}}/api/project/getAll?minDateAssigned=01-01-2021&&maxDateAssigned=01-01-2023",
 					"host": [
 						"{{BaseUrl}}"
 					],
@@ -431,6 +425,20 @@
 						"api",
 						"project",
 						"getAll"
+					],
+					"query": [
+						{
+							"key": "minDateAssigned",
+							"value": "01-01-2021"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "maxDateAssigned",
+							"value": "01-01-2023"
+						}
 					]
 				}
 			},
@@ -442,7 +450,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFidWphMSIsInVzZXJJZCI6IjEwIiwibmJmIjoxNjY4ODc5MDQ0LCJleHAiOjE2NjkwNTkwNDQsImlhdCI6MTY2ODg3OTA0NH0.DwVSeCVG95aJAzJiA66v3_qb0DyZpJoxlE2w5eYHRig",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Inp1bDEiLCJ1c2VySWQiOiI2IiwibmJmIjoxNjY5MTI5NjYzLCJleHAiOjE2NjkzMDk2NjMsImlhdCI6MTY2OTEyOTY2M30.jtjfOPgUBGs9pxVx7Hu59lJqjSeSAnyQROx9vRdyd1c",
 				"type": "string"
 			}
 		]

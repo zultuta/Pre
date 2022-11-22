@@ -9,14 +9,6 @@ namespace Pre.UserProjectManager.Infrastructure.Extension
 {
     public static class IServiceCollectionExtension
     {
-        //public static void ConfigureDBContext(this IServiceCollection services, string connectionString)
-        //{
-        //    services.AddDbContext<ProjectManagerDbContext>(options =>
-        //    {
-        //        options.UseSqlServer(connectionString);
-        //    });
-        //}
-
         static void ConfigureDBContextPool(this IServiceCollection services, string connectionString)
         {
             if (string.IsNullOrWhiteSpace(connectionString))

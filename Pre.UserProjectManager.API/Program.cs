@@ -16,7 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.ResolveCoreServices();
 builder.Services.ResolveSwagger();
 
-builder.Services.ResolveInfrastructureServices(Environment.GetEnvironmentVariable("MYSQL_CONNECTION_STRING"));
+builder.Services.ResolveInfrastructureServices("myconnectionstring"); // if you want to run on your own local db run migrations
+                                                                      // and set your connection string
 
 var key = Encoding.ASCII.GetBytes(AppSettings.Secret);
 builder.Services.AddAuthentication(x =>

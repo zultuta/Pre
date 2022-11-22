@@ -14,7 +14,7 @@ using IHost host = Host.CreateDefaultBuilder(args)
                 .ConfigureServices((_, services) =>
                     services.AddScoped<IAuthenticationService, AuthenticationService>()
                     .AddScoped<IProjectManagementService, ProjectManagementService>()
-                    .ResolveInfrastructureServices(Environment.GetEnvironmentVariable("MYSQL_CONNECTION_STRING")))
+                    .ResolveInfrastructureServices("myconnectionstring")) // if you want to run on your own local db run migrations and set your connection string
                 .Build();
 
 var _authService = ActivatorUtilities.CreateInstance<AuthenticationService>(host.Services);

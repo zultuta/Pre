@@ -1,0 +1,21 @@
+# Introduction 
+A web API (REST) application that manages project for users. 
+
+# Project Architecture 
+## Clean Architecture
+The business logic is at the Core of the application. The infrastructure and presentation layers (API) depends on it. Source code dependency points inwards with the Core at the center.
+- [Read more on clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
+### API: 
+Built with .Net 6.0. Swagger is used for API documentation and JWT for authentication and authorization.
+
+### Core:
+This holds the domain logic and includes models, entities, services, interfaces, DTOs, constants, Utils etc. This design makes it easy for us to change the presentation layer (from API to Background runner for example) or change the Infrastructure Layer. It helps with maintainability and scalability. All services are Injected.
+
+### Infrastructure:
+This is where communication with external concerns takes place. The data access implementation sits here. EF Core is used as the ORM and MySql  server as Db. We can seamlessly switch databases without changing data access implementations.
+
+### Test
+- Using Xunit Test Framework and Shouldly assertion Framework.
+- Unit Test: using the GWT (Given, When, Then) pattern.
+- Integration Test.
